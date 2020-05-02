@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
 from .models import Meals
-from django.http import HttpResponse
+
 # Create your views here.
 
 def home(request):
-    context = {}
+
     #return HttpResponse('<h1> Starsnowice home </h1>')
-    return render(request,'design/home.html', context)
+    return render(request,'design/home.html')
 #difference between return render and return Httresponse is
 #render can take argument of template and context, usually render is better
 
