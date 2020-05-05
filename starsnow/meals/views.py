@@ -25,5 +25,6 @@ def meal_detail(request,slug):
     context = {'meal_detail':meal_detail}
 
     return render(request, 'Meals/detail.html', context)
+
 def location(request):
     return render(request,'location/map.html')
