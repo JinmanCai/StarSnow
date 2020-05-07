@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background: #2c85d5;
+}
+header {
+    background: #14F1CD;
+    height:66px;
+}
+header *{
+    color: white;
+}
+header .logo{
+    float:left;
+    height:inherit;
+    margin-left: 2em;
+
+}
+header .logo-text{
+    margin: 8px;
+}
+header ul{
+    float:right;
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    border:1px solid red;
+}
+
+header ul li {
+    float: left;
+}
+
+header ul li a{
+    display:block;
+    padding-right:130px;
+    font-size:2.7em;
+    text-decoration: none;
+}
