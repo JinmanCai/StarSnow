@@ -27,4 +27,4 @@ def meal_detail(request,slug):
     return render(request, 'Meals/detail.html', context)
 
 def location(request):
-    return render(request,'location/map.html')
+    return render(request,'location/geoloc.html')
