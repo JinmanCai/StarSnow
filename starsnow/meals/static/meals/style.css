@@ -4,7 +4,7 @@
 body{
     padding: 0px;
     margin: 0px;
-    background: #2c85d5;
+    background: #FFFFFF;
 }
 header {
     background: #14F1CD;
@@ -48,3 +48,51 @@ header ul li a:hover{
     transition:0.5s;
 }
 
+.pic-slider{
+    position: relative;
+}
+.pic-slider .slider-title{
+    text-align: center;
+    margin:30px auto;
+}
+.pic-slider .pic-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding:10px 0px 10px 0px;
+
+}
+.pic-slider .pic-wrapper .pic{
+    display: inline-block;
+    background:white;
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    border-radius: 5px;
+}
+.pic-slider .pic-wrapper .pic .slider-image{
+    width:100%;
+    height:100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #A0A0A0;
+}
+.pic-slider .next{
+    position: absolute;
+    top:50%;
+    right: 30px;
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+}
+.pic-slider .prev{
+    position: absolute;
+    top:50%;
+    left: 30px;
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+}
