@@ -7,7 +7,7 @@ from .models import Meals
 def home(request):
 
     #return HttpResponse('<h1> Starsnowice home </h1>')
-    return render(request,'design/home.html')
+    return render(request,'design/index.html')
 #difference between return render and return Httresponse is
 #render can take argument of template and context, usually render is better
 
