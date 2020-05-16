@@ -36,11 +36,15 @@
         }
 
       function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-        directionsService.route(
+        if('geolocation' in navigator) {
+          console.log('geolocation available');
+          navigator.geolocation.getCurrentPosition(function(a)
+          {
+          directionsService.route(
             {
-              origin: {query: "8830 neff street, Houston, TX 77036"},
-              destination: {query: "9250 A Bellaire Blvd, Houston, TX 77036"},
-              travelMode: 'DRIVING'
+              origin: {lat:a.coords.latitude,lng:a.coords.longitude},
+              destination:"9250 A Bellaire Blvd, Houston, TX 77036",
+              travelMode:'DRIVING'
             },
             function(response, status) {
               if (status === 'OK') {
@@ -49,27 +53,12 @@
                 window.alert('Directions request failed due to ' + status);
               }
             });
-      }
-    </script>
-    <script>
-        if('geolocation' in navigator) {
-          console.log('geolocation available');
-          navigator.geolocation.getCurrentPosition(position=>
-          {
-            const lat = position.coords.latitude;
-            document.getElementById('latitude').textContent = lat;
-            const lon = position.coords.longitude;
-            document.getElementById('longitude').textContent = lon;
-            console.log(position.coords);
           });
         } else {
           console.log('geolocation unavailable');
         }
+      }
     </script>
-    <p>
-        latitude:<span id="latitude"></span><br />
-        longitude:<span id="longitude"></span>
-    </p>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH22_27-2VCxOyj5rYzqQC2LRJn6vWTm8&callback=initMap">
     </script>
