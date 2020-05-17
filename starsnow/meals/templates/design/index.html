@@ -33,7 +33,14 @@
         <i class="fas fa-chevron-left prev"></i>
         <i class="fas fa-chevron-right next"></i>
         <div class="pic-wrapper">
-            <div class="pic">
+            {% for meal in meal_list %}
+                <div class="pic">
+                    <a href="{%url 'meals:meal_detail' meal.slug%}">
+                        <img src="{{meal.image.url}}" class="slider-image">
+                    </a>
+                </div>
+            {%endfor%}
+            <!-- <div class="pic">
                 <img src="media/source/s1.jpg" class="slider-image">
             </div>
             <div class="pic">
@@ -53,7 +60,7 @@
             </div>
             <div class="pic">
                 <img src="media/source/s7.jpg" class="slider-image">
-            </div>
+            </div> -->
 
         </div>
 
@@ -63,6 +70,17 @@
 
 
 </div>
+<h1>end of slider</h1>
+
+
+<!-- <h1> Meals List</h1>
+
+{% for meal in meal_list %}
+<img src = "{{meal.image.url}}">
+
+{%endfor%} -->
+
+
 <div id = "bottom" class="fixed-footer">
         <div class="footer-content">
 

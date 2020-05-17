@@ -5,9 +5,10 @@ from .models import Meals
 # Create your views here.
 
 def home(request):
-
+    meal_list = Meals.objects.all()
+    context={'meal_list':meal_list,}
     #return HttpResponse('<h1> Starsnowice home </h1>')
-    return render(request,'design/index.html')
+    return render(request,'design/index.html',context)
 #difference between return render and return Httresponse is
 #render can take argument of template and context, usually render is better
 
